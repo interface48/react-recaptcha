@@ -5,7 +5,7 @@
   "main": "dist/react-recaptcha.js",
   "scripts": {
     "start": "babel-node example/server.js",
-    "compile": "cross-env NODE_ENV=production webpack --config webpack.production.config.js",
+    "compile": "cross-env NODE_ENV=production webpack -p --config webpack.production.config.js",
     "lint": "eslint src example",
     "test": "cross-env BABEL_ENV=production jest",
     "prepublish": "cross-env NODE_ENV=production npm run compile"
@@ -19,9 +19,6 @@
     "react-component",
     "reCAPTCHA",
     "component"
-  ],
-  "pre-commit": [
-    "compile"
   ],
   "author": "Bo-Yi Wu",
   "license": "BSD",
